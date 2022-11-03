@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kumet travel</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script defer src="js/script.js"></script>
+</head>
+
+<body>
+  <!-- start of header section -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="image/logo.png" alt="logo" />
+        </a>
+      </div>
+      <div class="nav">
+        <nav class="navbar">
+          <ul>
+            <li><a href="#home">home</a></li>
+            <li class="client">
+              <a href="#book">booking</a>
+              <div class="dropdown">
+                <h2>book what you need</h2>
+                <div class="bookcontainer">
+                  <a class="clientone" href="#book">companies</a>
+                  <a class="clienttwo" href="#book">client</a>
+                </div>
+              </div>
+            </li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#review">client reviews</a></li>
+            <li><a href="#gallery">gallery</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="user">
+        <button class="btn">login</button>
+      </div>
+    </div>
+  </header>
+  <!-- end of header section -->
+
+  <!-- start of home section -->
+  <section class="home" id="home">
+    <div class="welcome">
+      <h2>welcome in<br></h2>
+      <span> <i class="fa-solid fa-paper-plane"></i>kumet travel</span>
+      <h3> Travel inspired by kumet</h2>
+        <p>you can discover the world with us</p>
+    </div>
+    <div class="container">
+      <video class="video1" src="video_background/Background1.m4v" autoplay loop muted></video>
+      <video class="backgroundhedin video2" src="video_background/Synthesia STUDIO Your AI video.mp4"></video>
+
+    </div>
+  </section>
+  <!-- end of home section -->
+  <!-- start of login page -->
+  <section class="login">
+    <div class="close">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="container">
+      <form method="post" class="loginform">
+        <h3>login</h3>
+        <input name="username" type="text" placeholder="username">
+        <input name="password" type="password" placeholder="password">
+        <input class="btnlogin" name="btn" type="submit" value="login">
+        <h4>i have't an acount|| <strong>registering</strong> </h3>
+          <div class="error"></div>
+      </form>
+      <form class="signupform" method="post">
+        <h3>sign up</h3>
+        <input name="username" type="text" placeholder="username">
+        <input name="email" type="email" placeholder="your email">
+        <input name="password" type="password" placeholder="password">
+        <input class="btnsignup" name="btn" type="submit" value="sign up">
+        <h4>i have an acount|| <strong>login</strong> </h3>
+          <div class="error"></div>
+      </form>
+    </div>
+  </section>
+  <!--  end of login page -->
+  <!-- start of companies section -->
+  <section class="companies" id="book">
+    <h2 class="heading">booking</h2>
+    <div class="container">
+      <div class="image">
+        <img src="image/book-img.svg" />
+      </div>
+      <div class="form companydata">
+        <form id="company-form" method="POST" accept-charset="UTF-8">
+          <h3>get in touch</h3>
+          <input class="companyname" type="text" placeholder="company name" name="companyname" required />
+          <input type="text" placeholder="manager name" name="manager name" class="managername" required>
+          <input class="companyemail" type="email" name="email" placeholder="company email" required />
+          <input type="text" class="address" placeholder="company address" name="address" required>
+          <textarea class="message" name="message" placeholder="how we can help you ?"></textarea>
+          <input class="btn" type="submit" value="send" />
+          <div class="messageerror"></div>
+        </form>
+      </div>
+      <div class="form client1data hedin">
+        <form class="form2" method="POST" accept-charset="UTF-8">
+          <h3>get in touch</h3>
+          <div class="name">
+            <input class="firstname" type="text" placeholder="full name" name="full name" required />
+            <select name="type of services" class="servicesdata" required>
+              <option>hotel</option>
+              <option>travel</option>
+              <option>transport</option>
+            </select>
+
+          </div>
+
+          <input class="email" type="email" placeholder="your email" name="email" required />
+          <div class="age_phone">
+            <input class="age" type="number" placeholder="your age" name="age" required />
+            <input class="phone" type="number" placeholder="whatsapp number" name="phone" required />
+          </div>
+          <div class="fromcity">
+            <select name="fromcity" id="fromcity2" required>
+              <option>fromcity</option>
+              <option>cairo</option>
+              <option>giza</option>
+              <option>minia</option>
+              <option>fayoum</option>
+              <option>loxur</option>
+              <option>asswan</option>
+              <option>asuite</option>
+              <option>gena</option>
+            </select>
+            <input type="text" class="placeindetails" placeholder="place in details" required />
+          </div>
+          <div class="tocity">
+            <select name="tocity" id="tocity2" required>
+              <option>tocity</option>
+              <option>cairo</option>
+              <option>giza</option>
+              <option>minia</option>
+              <option>fayoum</option>
+              <option>loxur</option>
+              <option>asswan</option>
+              <option>asuite</option>
+              <option>gena</option>
+            </select>
+            <input required type="number" name="amount" id="amount" placeholder="count" />
+          </div>
+          <div class="date">
+            <input type="date" name="date" class="date2" required />
+            <input type="datetime" class="datetime2" name="datetime" placeholder="time" required />
+          </div>
+          <textarea class="clientmessage" name="message" placeholder="how we can help you ?"></textarea>
+          <input class="btn2" type="submit" value="send" />
+          <div class="messageerror"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- end of companies section -->
+  <!-- start of services section -->
+  <section class="services" id="services">
+    <div class="headinng">
+      <h2 class="heading">our services</h2>
+      <h4>why you book your travel with us!</h4>
+    </div>
+    <div class="containerservices">
+     
+      <div class="service">
+        <i class="fa-solid fa-wallet"></i>
+        <h3>comfortable price</h3>
+        <p>
+          with kumet you will get on your services with less price
+        </p>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-hotel"></i>
+        <h3>Affordable Hotels</h3>
+        <p>
+          Kumet deals with the best hotels that are
+          characterized by splendor, beauty and quality in everything
+        </p>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-utensils"></i>
+        <h3>Food & Drinks</h3>
+        <p>
+          The hotels that Kemet deals with are distinguished for providing outstanding
+          and satisfying food and drink to our customers
+        </p>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-globe"></i>
+        <h3>Worldwide</h3>
+        <p>
+          With Kemet, you can explore the whole world,
+          as it is distinguished by dealing with most airlines
+        </p>
+      </div>
+
+      <div class="service">
+        <i class="fas fa-headset"></i>
+        <h3>24/7 Support</h3>
+        <p>
+          There is a support team at the highest level who always listens to your requests
+          and solves your problems. You can contact at any time
+        </p>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-globe"></i>
+        <h3>our work</h3>
+        <p>
+          What does Kemet offer? <br>
+          1-flynas
+          2- Fly Dubai 3- Air Arabia,
+          4- Fly Egypt
+          5-Nile
+          6-Air Cairo
+          7-foundation stone
+          visas <br>
+          Implementation of tickets for all BSP airlines and Sainat for any destination in the world <br>
+          Book hotels around the world <br>
+          travel insurance <br>
+          Tourist programs inside and outside Egypt
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- end of services section -->
+
+  <section class="reviews" id="review">
+    <div class="headingreviews">
+      <h3 class="heading">clients reviews</h3>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="client">
+            <img src="image/pic-1.png" alt="client1" />
+            <h3>mohamed</h3>
+            <p>
+            thanks mr amir for every thing that you do for me
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client">
+            <img src="image/pic-2.png" alt="client1" />
+            <h3>nancy</h3>
+            <p>
+              my travel was so so nice thanks mr amir
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client">
+            <img src="image/pic-3.png" alt="client1" />
+            <h3>mina</h3>
+            <p>
+              i will deal with you each travel
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client">
+            <img src="image/pic-4.png" alt="client1" />
+            <h3>nurhan</h3>
+            <p>
+             realy thanks mr amir
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client">
+            <img src="image/pic-3.png" alt="client1" />
+            <h3>hany</h3>
+            <p>
+                realy travel inspired with kumet
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client">
+            <img src="image/pic-1.png" alt="client1" />
+            <h3>amir</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur, delectus?
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client">
+            <img src="image/pic-4.png" alt="client1" />
+            <h3>amir</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur, delectus?
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client">
+            <img src="image/pic-2.png" alt="client1" />
+            <h3>amir</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur, delectus?
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client">
+            <img src="image/pic-4.png" alt="client1" />
+            <h3>amir</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur, delectus?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- start of gallery secrion -->
+  <section class="gallery" id="gallery">
+    <div class="gallerysheading">
+      <h3 class="heading">our gallery</h3>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="image/gallery1.jpeg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="image/gallery2.jpeg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="image/gallery3.jpeg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="image/gallery4.jpeg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="image/gallery5.jpeg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="image/gallery6.jpeg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="image/gallery3.jpeg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="image/gallery5.jpeg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="image/gallery2.jpeg" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- end of gallery secrion -->
+  <!-- start of contact section -->
+  <section class="contact" id="contact">
+    <div class="contactheading">
+      <h3 class="heading">contact us</h3>
+    </div>
+    <div class="container">
+      <div class="location">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3519.7760789439953!2d30.761917885089463!3d28.092372382634036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b25a7ba578771%3A0x5ad2e4fa4ba6ce23!2z2KfZhNit2LPZitmG2YrYjCDZgtiz2YUg2KfZhNmF2YbZitin2Iwg2KfZhNmF2YbZitin!5e0!3m2!1sar!2seg!4v1659952793565!5m2!1sar!2seg"
+          width="400" height="400" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="form contactform">
+        <form method="POST">
+          <h3>get in touch</h3>
+          <input type="text" placeholder="full name" class="name">
+          <input type="email" placeholder="your email" class="email">
+          <textarea name="message" placeholder="how we can help you?"></textarea>
+          <input type="submit" value="send" class="btn">
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- end of contact section -->
+  <!-- the footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="links">
+        <div class="socialmedia">
+         <a href="index.html"><img src="image/logo.png" alt="logo"></a> 
+          <p>
+            travel inspired by kumet <br>
+            discover the world and egypt throught us</p>
+          <div class="links">
+            <a href="https://m.facebook.com/KUMETTRAVEL/?ref=page_internal"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+        <div class="quicklink">
+          <ul>
+            <li>
+              <i class="fa-solid fa-arrow-right"></i>
+              <a href="#home">home</a></li>
+            <li>
+              <i class="fa-solid fa-arrow-right"></i>
+              <a href="#book">book</a></li>
+            <li>
+              <i class="fa-solid fa-arrow-right"></i>
+              <a href="#services">services</a></li>
+            <li>
+              <i class="fa-solid fa-arrow-right"></i>
+              <a href="#reviews">clients reviews</a></li>
+            <li>
+              <i class="fa-solid fa-arrow-right"></i>
+              <a href="#gallery">gallery</a></li>
+          </ul>
+        </div>
+        <div class="contactinfo">
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-pin"></i>
+              <span>minia-minia</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>01099020949</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>amireldakrory052@gmail.com</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <span>10:00am-12:00pm</span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="developer">
+        <div class="describe">
+          designed and developed by||<strong>ali ismail </strong>
+        </div>
+        <div class="contactdeveloper">
+          <a href="https://www.linkedin.com/in/ALIJS/" target="_blank"> <i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/Ali5Ismail?tab=repositories" target="_blank"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://wa.me/01120450953" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="popups">
+    <i class="fa-solid fa-xmark"></i>
+    <div class="content2">
+      <i class="fa-solid fa-circle-check"></i>
+    <h2>thanks</h2>
+    <p>your message is sent</p>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init('cVy4O3Yy-9QPjS7u6');
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>

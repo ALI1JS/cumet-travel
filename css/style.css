@@ -1,0 +1,842 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+.hedin{
+  display:none;
+}
+.heading {
+  text-transform: capitalize;
+  font-size: 3vw;
+  color: rgb(12, 25, 100);
+  text-decoration: underline;
+}
+
+header.header {  /**/
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color: white;
+  /* box-shadow: 10px 10px 5px aliceblue; */
+}
+header .container {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container .logo a img {
+  width:70px;
+  height: 70px;
+}
+header .container .nav .navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .container .nav .navbar ul li {
+  padding:7px;
+  cursor: pointer;
+}
+header .container .nav .navbar ul li a {
+  text-transform: capitalize;
+  color: rgb(12, 25, 100);
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+header .container .user .btn {
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(12, 25, 100);
+  padding: 10px 15px;
+  color: white;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.navbar ul li.client {
+  position: relative;
+}
+.navbar ul li.client .dropdown {
+  position: absolute;
+  top: -130px;
+  width: 18vw;
+  min-height: 100px;
+  background-color: white;
+  border: 0.4px solid rgb(4, 4, 73);
+  padding: 10px 0px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  transition: 1s ease-in;
+  opacity: 0;
+}
+
+.navbar ul li.client .dropdown h2 {
+  font-size: 1.5vw;
+  text-transform: capitalize;
+}
+.navbar ul li.client .dropdown .bookcontainer {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: flex-start; */
+  flex-direction: column;
+}
+.navbar ul li.client .dropdown .bookcontainer a {
+  padding: 2px 0px;
+}
+.navbar ul li.client .dropdown .bookcontainer a:hover {
+  border-bottom: 1px solid rgba(97, 99, 99, 0.333);
+}
+/* start of login page */
+.login{
+  width: 100vw;
+  height:600px;
+  background-color:rgba(242, 239, 239,.3);
+  position: absolute;
+  top: 0px;
+  z-index: 999;
+  top:-600px;
+  transition: 1.2s ease-in-out;
+  position: fixed;
+}
+.login .container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.login .container .loginform{
+  min-width: 30%;
+  min-height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 18px;
+}
+.login .container .loginform h3{
+  text-transform: capitalize;
+  font-size: 30px;
+  color: rgb(4, 6, 46);
+}
+.login .container .loginform h4{
+  text-transform: capitalize;
+  font-size: 20px;
+  color: rgb(1, 3, 18);
+  padding-top: 20px;
+}
+.login .container .loginform h4 strong{
+  color: rgb(192, 163, 20);
+  cursor: pointer;
+}
+.login .container .loginform input{
+  width: 90%;
+  height: 35px;
+  border: 1px solid rgba(182, 186, 186, 0.4);
+  border-radius: 7px;
+  outline: none;
+  background-color: rgb(223, 223, 230);
+   transform: translateY(20px); 
+  padding: 5px;
+}
+.login .container .loginform input.btnlogin{
+  width: 50%;
+  background-color: rgba(5, 1, 25, 0.901);
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.4vw;
+  cursor: pointer;
+}
+.login .close{
+  position: absolute;
+  right:4vw;
+  top: 3vw;
+}
+.login .close i{
+  font-size:3vw;
+  cursor: pointer;
+}
+
+.error{
+  width: 100%;
+  color: rgb(227, 90, 90);
+  text-transform: capitalize;
+  font-size:18px;
+  text-align: center;
+}
+.signupform{
+  display:none;
+ min-width: 30%;
+  min-height: 250px;
+  background-color: white;
+  border-radius: 10px;
+   padding: 20px;
+}
+.signupform h3{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: rgb(4, 3, 52);
+}
+.signupform input{
+  width: 80%;
+  height: 30px;
+  border: 1px solid rgb(194, 202, 202);
+  outline: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-left: 15px;
+  padding: 5px;
+}
+.signupform input.btnsignup{
+  width: 30%;
+   background-color: rgb(2, 2, 35);
+   color: white;
+   transform: translateX(7vw);
+   cursor: pointer;
+}
+.signupform h4{
+  color: rgb(11, 3, 39);
+  text-transform: capitalize;
+}
+.signupform h4 strong{
+  color: rgba(208, 141, 32, 0.467);
+  text-transform: capitalize;
+  font-size:2.5vw;
+  cursor: pointer;
+}
+/* end of login page */
+/* start of home section */
+.home {
+  width: 100vw;
+  height: 100%;
+}
+.home .container {
+  width: 100vw;
+  height: 100%;
+}
+.home .container video {
+  width: 100%;
+  height: 100%;
+}
+.home .welcome{
+  min-width:20vw;
+  min-height: 10vh;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-transform: capitalize;
+}
+.home .welcome h2{
+  color: rgb(206, 144, 9);
+   font-size:3vw;
+   margin: 5px 0px;
+}
+.home .welcome span{
+  color: rgb(206, 144, 9);
+  font-size: 2vw;
+}
+.home .welcome h3{
+  font-size:3vw;
+  color: rgb(206, 144, 9);
+   font-weight: bold;
+   margin: 5px 0px;
+}
+.home .welcome p{
+  font-size:2vw;
+  color: rgb(206, 144, 9);
+}
+/* .home .welcome button{
+  border: none;
+  border-radius: 7px;
+  padding: 10px 20px;
+  background-color:rgb(9, 3, 59);
+  text-transform: capitalize;
+  transition: .4s ease-in-out;
+}
+.home .welcome button a{
+  color: white;
+} */
+.backgroundhedin{
+  display: none;
+}
+/* end of home section */
+/* start of companies section */
+.companies {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 0px;
+  position: relative;
+}
+
+.companies .container {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+}
+.companies .container .image {
+  width: 40vw;
+}
+.companies .container .image img {
+  width: 40vw;
+}
+.companies .container .form {
+  width: 45vw;
+  padding: 20px;
+  background-color: white;
+  box-shadow: inset 10px 10px 10px rgb(242, 238, 238),
+    inset -10px -10px 10px rgb(242, 239, 239);
+}
+.companies .container .form form {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+.companies .container .form form h3 {
+  text-align: center;
+  text-transform: capitalize;
+  color: rgb(3, 3, 55);
+  font-size: 2vw;
+}
+
+.companies .container .form form input.companyname,
+.companies .container .form form input.companyemail,
+.companies .container .form form textarea,.companies .container .form form input.managername,.companies .container .form form input.address {
+  width: 80%;
+  margin: auto;
+  transform: translateX(30px);
+  margin: 7px 0px;
+  border: 1px solid rgb(203, 208, 208);
+  padding: 10px;
+  outline: none;
+}
+.companies .container .form form input.companyname,
+.companies .container .form form input.companyemail,
+.companies .container .form form input.managername,
+.companies .container .form form input.address {
+  height: 30px;
+  border-radius: 10px;
+}
+.companies .container .form form textarea {
+  height: 100px;
+  border-radius: 5px;
+  resize: none;
+}
+.companies .container .form form input.btn {
+  width: 8vw;
+  transform: translateX(13vw);
+  margin-top: 10px;
+  padding: 6px 10px;
+  background-color: rgb(6, 6, 61);
+  color: white;
+  text-transform: capitalize;
+  border-radius: 7px;
+}
+/* the second form:service on for client */
+.form2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+form .name,
+form .age_phone,
+form .fromcity,
+form .tocity,
+form .date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+form .name input,
+form .age_phone input,
+form .fromcity input,
+form .tocity input,
+form .date input,
+form .email,
+form .fromcity select,form .tocity select {
+  width: 48%;
+  height: 30px;
+  border: 1px solid rgb(192, 195, 195);
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
+form .email {
+  width: 85%;
+}
+form.form2 input.btn2{
+  background-color: rgb(3, 11, 85);
+  color: white;
+  width: 20%;
+  font-size: 1.3vw;
+  color: white;
+  text-transform: capitalize;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+}
+
+form.form2 .name .servicesdata{
+  border: 1px solid rgb(220, 224, 224);
+  outline: none;
+  width: 40%;
+  height:35px;
+  padding: 5px;
+  border-radius: 6px;
+}
+/* end of companies section */
+/* start of services section */
+.services{
+  width: 100vw;
+  min-height: 300px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  gap:30px;
+  padding:15px 0px;
+}
+.services .headinng h2{
+  text-align: center;
+ 
+}
+.services .headinng h4{
+  text-align: center;
+  font-size:2vw;
+  text-transform: capitalize;
+  color: rgb(6, 6, 61);
+}
+.services .containerservices{
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: white;
+}
+.services .containerservices .service{
+    width:280px;
+    min-height: 100px;
+    border-radius: 10px;
+    background-color: rgb(228, 192, 93);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(66, 39, 123);
+    transition: 1.2s ease-in-out;
+    cursor: pointer;
+}
+.services .containerservices .service:hover{
+  background-color:rgb(66, 39, 123);
+  color: white;
+   transform: scale(1.2,1.2);
+}
+.services .containerservices .service i{
+  font-size: 2.3vw;
+}
+.services .containerservices .service h3{
+  font-size: 1.6vw;
+  text-transform: capitalize;
+}
+.services .containerservices .service p{
+  font-size: 1.5vw;
+  text-transform: capitalize;
+}
+/* end of services section */
+/* start of reviews section */
+.reviews{
+  width: 100%;
+  min-height: 400px;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+ min-height: 100%;
+  padding: 20px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
+.reviews .swiper .swiper-slide .client{
+  width: 350px;
+  padding:20px;
+  background-color: rgb(10, 3, 68);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s ease;
+}
+.reviews .swiper .swiper-slide .client:hover{
+ transform: scale(1.2,1.2);
+}
+
+.reviews .swiper .swiper-slide .client img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.reviews .swiper .swiper-slide .client h3{
+  text-transform: capitalize;
+  font-size:1.4vw;
+  color: white;
+}
+.reviews .swiper .swiper-slide .client p{
+  text-transform: capitalize;
+  font-size:1vw;
+  color: white;
+  line-height: 20px;
+}
+
+
+/* end of reviews section */
+/* start of gallery section */
+ .gallery{
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+ .gallery .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+ .swiper-slide {
+  background-position: center;
+  background-size: cover;
+    width:5vw;
+  height:250px; 
+}
+
+ .swiper-slide img {
+  display: block;
+  width:40%;
+}
+
+/* end of gallery section */
+/* start of contact section */
+.contact{
+  width: 100%;
+  min-height: 400px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact .container{
+  width: 90%;
+  margin: auto;
+  display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+gap: 50px;
+padding:20px 0px;
+}
+.contact .container .location,.contact .container .form{
+  width: 430px;
+  height: 90%;
+  padding: 10px;
+  background-color:rgb(215, 218, 220);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.contact .container .form form{
+  background-color: white;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.contact .container .form form h3{
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgba(6, 4, 21, 0.821);
+}
+.contact .container .form form input.name,.contact .container .form form input.email{
+  width: 90%;
+  height: 35px;
+  border: 1px solid rgb(182, 187, 187);
+  border-radius: 10px;
+  outline: none;
+  padding: 5px;
+}
+.contact .container .form form textarea{
+  width: 90%;
+  height:150px;
+  resize: none;
+  border: 1px solid rgb(182, 187, 187);
+  border-radius: 10px;
+  outline: none;
+  padding: 5px;
+}
+.contact .container .form form input.btn{
+   border: none;
+   border-radius: 10px;
+   outline: none;
+   background-color: rgb(2, 2, 43);
+   color: white;
+   text-transform: capitalize;
+   font-size: 1vw;
+   padding: 10px 35px;
+   transform: translateX(.7vw);
+}
+/* end of contact section */
+/* footer part */
+.footer{
+  width: 100%;
+  min-height: 200px;
+  background-color: rgba(4, 1, 47, 0.929);
+}
+.footer .container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   justify-content: center; 
+   padding-top: 30px;
+}
+.footer .container .links{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+.footer .container .links .socialmedia{
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.footer .container .links .socialmedia img{
+  width:5vw;
+  height: 5vw;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.footer .container .links .socialmedia p{
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.5vw;
+  line-height: 22px;
+}
+.footer .container .links .socialmedia .links i{
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+.footer .container .links .quicklink ul li,.footer .container .links .contactinfo ul li{
+  padding:3px;
+}
+.footer .container .links .quicklink ul li i,.footer .container .links .contactinfo ul li i{
+    color: rgb(226, 218, 218);
+    font-size:15px;
+}
+.footer .container .links .quicklink ul li a,.footer .container .links .contactinfo ul li span{
+  color: white;
+  text-transform: capitalize;
+  transition: .3s ease-in-out;
+}
+.footer .container .links .quicklink ul li:hover a{
+  padding-left:10px;
+  color: rgb(18, 111, 139);
+}
+.footer .container .developer{
+  width: 100%;
+  min-height: 100px;
+  border-top: 2px solid rgb(6, 111, 111);
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap:25vw;
+}
+.footer .container .developer .describe{
+  color: white;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.footer .container .developer .describe strong{
+  text-transform: uppercase;
+  color: rgb(23, 187, 202);
+  cursor: pointer;
+}
+.footer .container .developer .contactdeveloper i{
+   cursor: pointer;
+   color: rgb(23, 187, 202);
+   font-size: 25px;
+   padding: 5px;
+   transition: .5s ease-in-out;
+}
+.footer .container .developer .contactdeveloper i:hover{
+    transform: scale(1.2,1.2);
+}
+.popups{
+  position: absolute;
+  top:700px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  width: 20vw;
+  height: 30vh;
+  border-radius: 7px;
+  padding: 5px;
+  opacity: 0;
+  transition: 2s ease-out;
+}
+.popups .fa-xmark{
+  transform: translateX(18vw);
+  font-size:2vw;
+  cursor: pointer;
+}
+.popups .content2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.popups .content2 .fa-circle-check{
+   font-size:5vw;
+   color: green;
+}
+.popups .content2 h2,.popups .content2 p{
+  color: green;
+  text-transform: capitalize;
+}
+
+/* responsive */
+@media (max-width:820px) {
+  .home .welcome{
+    top:14%;
+  }
+  .companies .container {
+   flex-wrap: wrap;
+  }
+  .companies .container .image {
+    width: 70%;
+  }
+  .companies .container .image img {
+    width:90%;
+  }
+  .companies .container .form {
+    width:90%;
+  }
+  
+  .companies .container .form form h3 {
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(3, 3, 55);
+    font-size: 5vw;
+  }
+  .companies .container .form form input.btn {
+    width: 18vw;
+     transform: translateX(23vw);
+  }
+  .contact .container .location iframe{
+    width: 300px;
+  }
+  
+  .login .container form{
+    width: 80%;
+  }
+  .login .container form input.btnlogin{
+    font-size: 2.5vw;
+  }
+  .swiper-slide img {
+    width:90%;
+  }
+  .popups{
+    width: 30vw;
+  }
+  .popups .fa-xmark{
+    transform: translateX(26vw);
+  }
+}
